@@ -15,7 +15,7 @@ This is a disaster rescue simulator. It sends vehicles to save people after disa
 1. The simulator loads a map with roads and locations
 2. Rescue requests come in from different places
 3. The program picks a free vehicle
-4. It finds the best path using Dijkstra algorithm
+4. It finds the best path using Dijkstra or A* algorithm
 5. The vehicle goes there, saves people, and comes back
 
 ## Project Structure
@@ -39,11 +39,12 @@ rescueClean/
 
 ## Settings
 
-You can change settings in `cfg/sim.cfg`:
+You can change settings in `cfg/sim.cfg`. To change the path finding algorithm, set `ALGORITHM=ASTAR` instead of `ALGORITHM=DIJKSTRA` in the config file.
 
 | Setting | What it does |
 |---------|-------------|
 | MAP | Which map to use |
+| ALGORITHM | Path finding method: `DIJKSTRA` or `ASTAR` |
 | NUM_RESCUES | Number of rescue vehicles |
 | VEHICLE_SPEED | How fast vehicles move |
 | DURATION | How long the simulation runs |
