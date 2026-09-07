@@ -1,0 +1,9 @@
+# IDE
+.idea/
+*.iml
+
+# Compiled output
+out/
+
+# Serialized road models
+*.obj
